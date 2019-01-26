@@ -17,7 +17,7 @@ title: Leonardo Martins
 title_html: "leonardo<b>martins</b>.com"
 email: contato@leonardomartins.com
 description: > # this means to ignore newlines until "baseurl:"
-  Energy specialist with emphasis on numerical models.
+  Energy specialist interested in the operation and economics of power systems with emphasis on the Brazilian electricity markets
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 

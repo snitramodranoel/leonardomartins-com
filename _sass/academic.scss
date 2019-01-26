@@ -4,30 +4,30 @@ $type-scale-large: (
   h1: 2.941rem,
   h2: 2.111rem,
   h3: 1.663rem,
-  h4: 1.333rem,
-  p: 1.25rem,
-  small: 1.15rem,
-  vsmall: 1rem,
+  h4: 1.35rem,
+  p: 1.3125rem,
+  small: 1.25rem,
+  vsmall: 1.1rem,
 );
 
 $type-scale-medium: (
   h1: 2.441rem,
   h2: 1.653em,
   h3: 1.563rem,
-  h4: 1.333rem,
-  p: 1.25rem,
-  small: 1.15rem,
-  vsmall: 1rem,
+  h4: 1.35rem,
+  p: 1.3125rem,
+  small: 1.25rem,
+  vsmall: 1.1rem,
 );
 
 $type-scale-small: (
   h1: 2.148rem,
   h2: 1.719rem,
   h3: 1.375rem,
-  h4: 1.233rem,
-  p: 1.1rem,
-  small: 0.95rem,
-  vsmall: 0.85rem,
+  h4: 1.35rem,
+  p: 1.3125rem,
+  small: 1.25rem,
+  vsmall: 1.1rem,
 );
 
 $type-line-large: (
@@ -92,7 +92,7 @@ $text-color:       #111 !default;
 $background-color: #fdfdfd !default;
 $brand-color:      #d33682 !default;
 
-$grey-color:       #3F3F3F !default;
+$grey-color:       #3f3f3f !default;
 $grey-color-light: lighten($grey-color, 50%) !default;
 $grey-color-lighter: lighten($grey-color, 90%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
