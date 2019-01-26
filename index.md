@@ -1,6 +1,11 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
+layout: about
+title: L. S. A. Martins
+invisible: true
+seo:
+  title: Leonardo Martins
 ---
+
+IBM Research Manager in São Paulo, Brazil.
+
+He received his Ph.D. in Electrical Engineering from [University of Campinas](http://www.unicamp.br), working on numerical methods for electrical power systems. His current research interests include the optimality analysis of mathematical models for the operation and economics of power generation and transmission in electricity markets. He is a published author in several peer-reviewed JCR journals and conference proceedings, including a book chapter. His current _h-index_ is 4 in the Scopus database.
