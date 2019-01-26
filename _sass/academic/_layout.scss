@@ -632,6 +632,11 @@
     @include size(small);
     margin-top: $spacing-unit / 6;
     padding-top: $spacing-unit / 2;
+    border-top: {
+      width: 1px;
+      style: dashed;
+      color: rgba(191, 191, 191, 0.9);
+    }
 
     @include media-query($on-laptop) {
       p {

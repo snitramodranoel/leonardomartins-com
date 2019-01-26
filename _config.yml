@@ -17,7 +17,7 @@ title: Leonardo Martins
 title_html: "leonardo<b>martins</b>.com"
 email: contato@leonardomartins.com
 description: > # this means to ignore newlines until "baseurl:"
-  Energy specialist interested in the operation and economics of power systems with emphasis on the Brazilian electricity markets
+  Energy specialist interested in the operation and economics of power systems with emphasis on the Brazilian electricity markets.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -27,14 +27,15 @@ author_website: https://scholar.google.com/citations?user=esE9giIAAAAJ
 curriculum:
   name: Résumé
   url: assets/cv.pdf
-github_username:  snitramodranoel
 linkedin_username: snitramodranoel
+github_username:  snitramodranoel
+twitter_username: snitramodranoel
 cc: by-nc-nd
 
 # Build settings
-markdown: redcarpet
-redcarpet:
-  extensions: ["tables", "fenced_code_blocks", "autolink", "footnotes", "with_toc_data"]
+markdown: kramdown
+#redcarpet:
+#  extensions: ["tables", "fenced_code_blocks", "autolink", "footnotes", "with_toc_data", "no_intra_emphasis"]
 
 gems:
   - jekyll-feed
