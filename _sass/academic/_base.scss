@@ -169,11 +169,11 @@ h4 {
 a {
   color: $link-base-color;
   text-decoration: none;
-
+/*
   &:visited {
     color: darken($brand-color, 5%);
   }
-
+*/
   &:hover {
     color: $link-hover-base-color;
     text-decoration: none;

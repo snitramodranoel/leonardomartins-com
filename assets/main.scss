@@ -3,7 +3,7 @@
 ---
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Proza+Libre');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Proza+Libre|Maven+Pro|Bree+Serif|Maven+Pro|Raleway:400,900');
 
 // Our variables
 // $base-font-family: "Open Sans", sans-serif;
@@ -19,10 +19,10 @@ $alt-font-weight: bold;
 $spacing-unit:     50px;
 
 $text-color:       #3e464e;
-$header-color:     #324E69;
+$header-color:     #0350a7;
 $background-color: #f7f7f7;
-$brand-color:      #3b5998;
-$brand-hover-color: #909cb5;
+$brand-color:      #0350a7;
+$brand-hover-color: #0089ff;
 
 $grey-color:       #3f3f3f;
 $grey-color-light: lighten($grey-color, 30%);
@@ -32,8 +32,8 @@ $grey-color-dark:  darken($grey-color, 25%);
 // Width of the content area
 $content-width:    700px;
 
-$on-palm:          500px;
-$on-laptop:        700px;
+$on-palm:          768px;
+$on-laptop:        1024px;
 
 // Minima also includes a mixin for defining media queries.
 // Use media queries like this:
