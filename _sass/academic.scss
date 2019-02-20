@@ -89,8 +89,11 @@ $alt-font-weight: bold !default;
 $spacing-unit:     50px !default;
 
 $text-color:       #111 !default;
+$link-base-color: #7887a8;
+$link-hover-base-color: #b2bfcc;
+$nav-link-color: #32415e;
+$nav-link-hover-color: #b1a99a;
 $background-color: #fdfdfd !default;
-$brand-color:      #d33682 !default;
 
 $grey-color:       #3f3f3f !default;
 $grey-color-light: lighten($grey-color, 50%) !default;

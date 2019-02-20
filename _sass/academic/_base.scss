@@ -167,7 +167,7 @@ h4 {
  * Links
  */
 a {
-  color: $brand-color;
+  color: $link-base-color;
   text-decoration: none;
 
   &:visited {
@@ -175,8 +175,8 @@ a {
   }
 
   &:hover {
-    color: $text-color;
-    text-decoration: underline;
+    color: $link-hover-base-color;
+    text-decoration: none;
   }
 }
 
@@ -295,12 +295,9 @@ hr {
  * Icons
  */
 .icon > svg {
-  display: inline-block;
-  vertical-align: middle;
-
   circle,
   path:last-of-type {
-    fill: $grey-color;
+    fill: #4061a6;
   }
 }
 

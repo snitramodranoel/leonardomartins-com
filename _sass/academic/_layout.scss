@@ -14,6 +14,7 @@
 
   .site-header-float {
     min-height: 60px;
+    position: relative;
   }
 
   .lang-selector {
@@ -95,7 +96,7 @@
         display: inline-block;
 
         a {
-          color: $grey-color-dark;
+          /*color: $grey-color-dark;*/
 
           &:hover {
             text-decoration: underline
@@ -127,21 +128,16 @@
   }
 }
 
-.site-title {
+ .site-title {
   display: inline-block;
   font-size: 26px;
   font-weight: 300;
   line-height: 55px;
   letter-spacing: 0px;
   margin-bottom: -5px;
-
-  &,
-  &:visited {
-    color: $grey-color-dark;
-  }
+  color: $brand-color;
   &:hover {
-    text-decoration: none;
-    border-bottom: 5px $brand-color solid;
+    color: $brand-hover-color;
   }
 
   b {
@@ -186,7 +182,7 @@
   line-height: 60px;
   z-index: 1000;
 
-  .menu-icon {
+  .menu-icon, .menu-icon-close {
     display: none;
   }
 
@@ -203,11 +199,12 @@
       display: inline-block;
       height: 55px;
 
-      .page-link {
-        color: $text-color;
+      a.page-link {
+        color: $nav-link-color;
 
         &:hover {
           text-decoration: none;
+          color: $nav-link-hover-color;
         }
       }
 
@@ -216,62 +213,64 @@
         margin-right: 15px;
       }
 
-      &:hover {
-        border-bottom: 5px $grey-color solid;
-      }
-
       @include media-query($on-palm) {
-        height: auto;
         line-height: normal;
-
-        &:nth-child(n+0) {
-          margin: 0;
-          height: auto;
-          padding: 0 10px 0px;
-        }
-
-        a {
-          margin: 0px;
-          padding: 0px;
-        }
-
+        display: block;
       }
-
     }
   }
-
   @include media-query($on-palm) {
-    position: absolute;
-    top: 9px;
-    right: $spacing-unit / 2;
+    position: relative;
+    top: 18px;
     background-color: $background-color;
-    border: 1px solid $grey-color-light;
     border-radius: 5px;
-    text-align: right;
-    margin-left: 20px;
+    text-align: center;
 
-    .menu-icon {
-      display: block;
+    .menu-icon, .menu-icon-close {
+      display: flex;
+      flex-flow: row wrap;
       float: right;
       width: 36px;
       height: 26px;
+      align-items: center;
+      justify-content: center;
       line-height: 0;
-      padding-top: 10px;
-      text-align: center;
+      cursor: pointer;
 
       > svg path {
-        fill: $grey-color-dark;
+        fill: #3b5998;
+      }
+
+      &.d-none {
+        display: none;
+      }
+
+      &.d-flex {
+        display: flex;
+      }
+    }
+
+    .menu-icon-close {
+      > svg path {
+        fill: #3b5998;
+      }
+    }
+
+    &.opened {
+      position: absolute;
+      top: 18px;
+      left: 0;
+      right: 0;
+      background: #f4f4f4;
+      min-height: 250px;
+      .trigger {
+        display: block;
       }
     }
 
     .trigger {
       clear: both;
       display: none;
-    }
-
-    &:hover .trigger {
-      display: block;
-      padding-bottom: 5px;
     }
 
     .nav-list {
@@ -304,10 +303,6 @@
   @include size(vsmall);
   border-top: 1px solid $grey-color-light;
   color: $grey-color;
-
-  a {
-    color: $grey-color;
-  }
 
   .footer-col {
     list-style: none;
@@ -369,9 +364,6 @@
   }
 
   .contact-list {
-    a .username:hover {
-      text-decoration: underline;
-    }
 
     @include media-query($on-palm) {
       margin-bottom: $spacing-unit / 2;
@@ -508,8 +500,14 @@
   margin-left: 0;
   list-style: none;
 
+  .date, .post-meta {
+    display: flex;
+    align-items: center;
+  }
+
   .last-update {
-    display: none;
+    font-size: small;
+    margin-left: 5px;
     color: $grey-color-light;
     a {
       color: $grey-color-light;
@@ -518,10 +516,6 @@
 
   > li {
     margin-bottom: $spacing-unit;
-
-    &:hover .last-update {
-      display: inline-block;
-    }
   }
 
   .post-link {
@@ -720,8 +714,13 @@
   margin-top: $spacing-unit / 2;
   text-transform: lowercase;
 
-  a:hover {
-    text-decoration: none;
+  a {
+    display: flex;
+    span.icon {
+      display: flex;
+      align-items: center;
+      margin-right: 4px;
+    }
   }
 }
 
@@ -750,6 +749,11 @@
 
   h1 {
     margin-top: 0;
+    color: #272f46;
+  }
+
+  .research-manager {
+    color: red;
   }
 }
 
