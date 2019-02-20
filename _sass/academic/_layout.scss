@@ -3,11 +3,7 @@
  */
 .site-header {
   border-top: 5px solid $grey-color;
-  border-bottom: 1px solid $grey-color-light;
-
-  @include media-query($on-laptop) {
-    min-height: 100px;
-  }
+  border-bottom: 1px solid $grey-color-lighter;
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -180,7 +176,6 @@
 .site-nav {
   float: right;
   line-height: 60px;
-  z-index: 1000;
 
   .menu-icon, .menu-icon-close {
     display: none;
@@ -197,7 +192,6 @@
 
     li {
       display: inline-block;
-      height: 55px;
 
       a.page-link {
         color: $nav-link-color;
@@ -222,16 +216,15 @@
   @include media-query($on-palm) {
     position: relative;
     top: 18px;
-    background-color: $background-color;
-    border-radius: 5px;
-    text-align: center;
 
     .menu-icon, .menu-icon-close {
-      display: flex;
-      flex-flow: row wrap;
-      float: right;
       width: 36px;
       height: 26px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      flex-flow: row wrap;
       align-items: center;
       justify-content: center;
       line-height: 0;
@@ -261,10 +254,11 @@
       top: 18px;
       left: 0;
       right: 0;
-      background: #f4f4f4;
-      min-height: 250px;
+      background: $background-color;
+      height: auto;
       .trigger {
         display: block;
+        text-align: center;
       }
     }
 
@@ -274,23 +268,23 @@
     }
 
     .nav-list {
-      .page-link:hover {
-        color: $brand-color;
-      }
+      padding-bottom: 18px;
 
-      li:hover {
-        border: none;
-      }
-    }
+      li {
+        &:hover {border: none; }
 
-    .page-link {
-      display: block;
-      padding: 5px 10px;
+        a.page-link {
+          display: block;
+          padding: 12px;
+          font-size: 1.4rem;
 
-      &:not(:last-child) {
-        margin-right: 0;
+          &:not(:last-child) {
+            margin-right: 0;
+          }
+          margin-left: 20px;
+        }
       }
-      margin-left: 20px;
+      border-bottom: 1px solid $nav-divider-color;
     }
   }
 }
@@ -301,7 +295,7 @@
 
 .site-footer {
   @include size(vsmall);
-  border-top: 1px solid $grey-color-light;
+  border-top: 1px solid $grey-color-lighter;
   color: $grey-color;
 
   .footer-col {
@@ -384,7 +378,10 @@
     }
 
     a {
-      color: $grey-color-light;
+      color: $footer-link-color;
+      &:hover {
+        color: $footer-link-hover-color;
+      }
     }
 
     .cc-licence {
@@ -749,11 +746,14 @@
 
   h1 {
     margin-top: 0;
-    color: #272f46;
+    color: $header-color;
   }
 
-  .research-manager {
-    color: red;
+  .post-content {
+    p:first-child {
+      color: #777887;
+      font-weight: bold;
+    }
   }
 }
 
