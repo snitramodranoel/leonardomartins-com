@@ -2,7 +2,7 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color;
+  border-top: 5px solid $nav-link-color;
   border-bottom: 1px solid $grey-color-lighter;
   padding: 4px 0 4px 0;
 
@@ -144,7 +144,7 @@
 
    b {
      font-weight: 600;
-     color: #587392;
+     color: $nav-link-color;
    }
 
    @include media-query($on-palm) {
@@ -186,6 +186,12 @@
 }
 
 
+@mixin underline() {
+  &.active {
+    border-bottom: 4px solid $nav-link-hover-color;
+  }
+}
+
 .site-nav {
   float: right;
 
@@ -212,7 +218,11 @@
         &:hover {
           text-decoration: none;
           color: $nav-link-hover-color;
+
+          @include underline;
         }
+
+        @include underline;
       }
 
       // Gaps between nav items, but not on the last one
@@ -787,7 +797,7 @@
   .post-content {
 
     p:first-child {
-      color: #8caed4;
+      color: #6195c2;/*#8caed4;*/
       font-family: 'Bree Serif', sans-serif;
     }
   }

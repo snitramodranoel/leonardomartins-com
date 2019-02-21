@@ -4,9 +4,11 @@
 <ul class="nav-list {{ include.class }}">
 {% for link in site.nav_ext_links %}
   {% if link.url and link.name %}
-  <li><a target="_blank" class="page-link" href="{% include _i18n/i18n.html value=link.url %}">
+  <li>
+    <a target="_blank" class="page-link" href="{% include _i18n/i18n.html value=link.url %}">
       {% include _i18n/i18n.html value=link.name %}
-  </a></li>
+    </a>
+  </li>
   {% endif %}
 {% endfor %}
 
@@ -16,10 +18,20 @@
   {% assign pages = site.pages %}
 {% endif %}
 
+{% assign url = page.url %}
+
 {% for my_page in pages %}
 {% unless my_page.invisible %}
   {% if my_page.title %}
-  <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+  <li>
+    <a
+      {% if my_page.url == url %}
+      class="page-link active"
+      {% else %}
+      class="page-link"
+      {% endif %}
+      href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+  </li>
   {% endif %}
 {% endunless %}
 {% endfor %}
