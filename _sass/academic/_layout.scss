@@ -4,13 +4,19 @@
 .site-header {
   border-top: 5px solid $grey-color;
   border-bottom: 1px solid $grey-color-lighter;
+  padding: 2px 0 2px 0;
 
   // Positioning context for the mobile navigation icon
   position: relative;
+  @include media-query($on-palm) {
+    border-top: 2px solid $grey-color-lighter;
+    border-bottom: 2px solid $grey-color-lighter;
+  }
 
   .site-header-float {
     min-height: 60px;
     position: relative;
+    line-height: 60px;
   }
 
   .lang-selector {
@@ -126,7 +132,6 @@
 
  .site-title {
    display: inline-block;
-
    font-family: "Raleway", sans-serif;
    font-size: 1.25em;
 
@@ -135,7 +140,6 @@
    }
 
    font-weight: 900;
-   line-height: 60px;
    letter-spacing: 0;
    color: $brand-color;
 
@@ -182,7 +186,6 @@
 
 .site-nav {
   float: right;
-  line-height: 60px;
 
   .menu-icon, .menu-icon-close {
     display: none;
@@ -223,20 +226,22 @@
   }
   @include media-query($on-palm) {
     position: relative;
-    top: 18px;
+    height: 60px;
 
     .menu-icon, .menu-icon-close {
-      width: 36px;
-      height: 26px;
-      position: absolute;
-      top: 0;
-      right: 0;
+      height: 60px;
       display: flex;
       flex-flow: row wrap;
       align-items: center;
-      justify-content: center;
       line-height: 0;
       cursor: pointer;
+      &:before {
+        content: "";
+        display: inline-block;
+        height: 60px;
+        border: 1px solid $grey-color-lighter;
+        margin-right: 25px;
+      }
 
       > svg path {
         fill: $link-base-color;
@@ -252,6 +257,9 @@
     }
 
     .menu-icon-close {
+      position: absolute;
+      top: 0;
+      right: 0;
       > svg path {
         fill: $link-base-color;
       }
@@ -259,14 +267,16 @@
 
     &.opened {
       position: absolute;
-      top: 18px;
+      top: 0;
       left: 0;
       right: 0;
-      background: $background-color;
       height: auto;
+
       .trigger {
         display: block;
         text-align: center;
+        background: $background-color;
+        margin-top: 66px;
       }
     }
 
@@ -276,7 +286,6 @@
     }
 
     .nav-list {
-      padding-bottom: 18px;
       border-bottom: 1px solid $nav-divider-color;
 
       li {
