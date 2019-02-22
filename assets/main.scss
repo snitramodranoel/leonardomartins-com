@@ -17,12 +17,11 @@ $alt-font-family: "Proza Libre", sans-serif;
 $alt-font-weight: bold;
 
 $spacing-unit:     50px;
-
-$text-color:       #3e464e;
-$header-color:     #587392;
+$text-color:       #000 !default;
+$header-color:     $text-color;
 $background-color: #fff;
-$brand-color:      #9faab7;
-$brand-hover-color: #3588a8;
+$brand-color:      $text-color;
+/*$brand-color:      #9faab7;*/
 
 $grey-color:       #3f3f3f;
 $grey-color-light: lighten($grey-color, 30%);

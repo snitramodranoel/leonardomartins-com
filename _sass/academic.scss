@@ -88,15 +88,12 @@ $alt-font-weight: bold !default;
 
 $spacing-unit:     50px !default;
 
-$link-base-color: #8a8a8a;
-$link-hover-base-color: #69a0cf;
-$nav-link-color: #587392;
+$link-base-color: #0077b5;
+$link-hover-base-color: $text-color;
+$nav-link-color: $text-color;
 $nav-divider-color: #dedede;
-$nav-link-hover-color: #3588a8;
-$footer-link-color: #494a4e;
-$footer-link-hover-color: $link-hover-base-color;
-$background-color: #fdfdfd !default;
 
+$background-color: #fdfdfd !default;
 $grey-color:       #3f3f3f !default;
 $grey-color-light: lighten($grey-color, 50%) !default;
 $grey-color-lighter: lighten($grey-color, 90%) !default;

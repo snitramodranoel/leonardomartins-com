@@ -4,13 +4,17 @@
 .site-header {
   border-top: 5px solid $nav-link-color;
   border-bottom: 1px solid $grey-color-lighter;
-  padding: 4px 0 4px 0;
 
   // Positioning context for the mobile navigation icon
   position: relative;
   @include media-query($on-palm) {
     border-top: 2px solid $grey-color-lighter;
     border-bottom: 2px solid $grey-color-lighter;
+    padding: 4px 0 4px 0;
+    .wrapper {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 
   .site-header-float {
@@ -139,7 +143,7 @@
    color: $brand-color;
 
    &:hover {
-     color: $brand-hover-color;
+     border-bottom: 5px #0077b5 solid
    }
 
    b {
@@ -210,6 +214,11 @@
 
     li {
       display: inline-block;
+      border-bottom: 5px solid transparent;
+
+      &:hover {
+      border-bottom: 5px #3f3f3f solid
+    }
 
       a.page-link {
         color: $nav-link-color;
@@ -217,12 +226,7 @@
 
         &:hover {
           text-decoration: none;
-          color: $nav-link-hover-color;
-
-          @include underline;
         }
-
-        @include underline;
       }
 
       // Gaps between nav items, but not on the last one
@@ -253,11 +257,11 @@
         display: inline-block;
         height: 60px;
         border: 1px solid $grey-color-lighter;
-        margin-right: 25px;
+        margin-right: 20px;
       }
 
       > svg path {
-        fill: $link-base-color;
+        fill: $grey-color-light;
       }
 
       &.d-none {
@@ -274,7 +278,7 @@
       top: 0;
       right: 0;
       > svg path {
-        fill: $link-base-color;
+        fill: $grey-color-light;
       }
     }
 
@@ -306,12 +310,13 @@
 
       li {
         margin-bottom: 20px;
+        border-bottom: none;
 
         &:not(:last-child) {
           margin-right: 0;
         }
 
-        &:hover {border: none; }
+        &:hover {border-bottom: none; }
 
         a.page-link {
           display: inline-block;
@@ -331,6 +336,13 @@
   @include size(vsmall);
   border-top: 1px solid $grey-color-lighter;
   color: $grey-color;
+
+  a {
+    color: $grey-color;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
   .footer-col {
     list-style: none;
@@ -403,7 +415,7 @@
   }
 
   .bottom {
-    color: $grey-color-light;
+    color: #bfbfbf;
     width: 100%;
     clear: both;
     float: none;
@@ -418,14 +430,9 @@
     .legal {
 
       a {
-        font-family: "Raleway", sans-serif;
-        color: $footer-link-color;
-        &:hover {
-          color: $footer-link-hover-color;
-        }
-
-        &.cc-licence { font-size: small;  text-transform: uppercase; }
+        color: #bfbfbf;
       }
+
     }
 
     .lang-selector {
@@ -494,6 +501,10 @@
 
       li {
         display: block;
+      }
+
+      a {
+        justify-content: flex-start;
       }
 
       .username {
@@ -762,6 +773,10 @@
       top: 1px;
       margin-right: 4px;
     }
+
+    @include media-query($on-laptop) {
+      justify-content: center;
+    }
   }
 }
 
@@ -775,7 +790,6 @@
   padding-right: $spacing-unit / 2;
   width: -webkit-calc(35% - (#{$spacing-unit} / 4));
   width:         calc(35% - (#{$spacing-unit} / 4));
-
 
   .user-picture {
     margin-bottom: $spacing-unit / 2;
@@ -796,8 +810,12 @@
 
   .post-content {
 
+    a:hover {
+      text-decoration: underline;
+    }
+
     p:first-child {
-      color: #6195c2;/*#8caed4;*/
+      color: $text-color;/*#8caed4;*/
       font-family: 'Bree Serif', sans-serif;
     }
   }
