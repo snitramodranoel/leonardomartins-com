@@ -3,14 +3,12 @@
  */
 .site-header {
   border-top: 5px solid $nav-link-color;
-  border-bottom: 1px solid $grey-color-lighter;
+  border-bottom: 2px solid $grey-color-lighter;
 
   // Positioning context for the mobile navigation icon
   position: relative;
   @include media-query($on-palm) {
     border-top: 2px solid $grey-color-lighter;
-    border-bottom: 2px solid $grey-color-lighter;
-    padding: 4px 0 4px 0;
     .wrapper {
       padding-left: 20px;
       padding-right: 20px;
@@ -136,12 +134,12 @@
 
  .site-title {
    display: inline-block;
-
    font-size: 26px;
    font-weight: 300;
    letter-spacing: 0;
    line-height: 60px;
    color: $brand-color;
+   border-bottom: 5px solid transparent;
 
    &:hover {
      border-bottom: 5px #0077b5 solid
@@ -242,10 +240,10 @@
 
   @include media-query($on-palm) {
     position: relative;
-    height: 60px;
+    height: 65px;
 
     .menu-icon, .menu-icon-close {
-      height: 60px;
+      height: 65px;
       display: flex;
       flex-flow: row wrap;
       align-items: center;
@@ -254,7 +252,7 @@
       &:before {
         content: "";
         display: inline-block;
-        height: 60px;
+        height: 54px;
         border: 1px solid $grey-color-lighter;
         margin-right: 20px;
       }
