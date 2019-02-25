@@ -17,21 +17,22 @@ $alt-font-family: "Proza Libre", sans-serif;
 $alt-font-weight: bold;
 
 $spacing-unit:     50px;
-
-$text-color:       #000;
+$text-color:       #000 !default;
+$header-color:     $text-color;
 $background-color: #fff;
-$brand-color:      #0077b5;
+$brand-color:      $text-color;
+/*$brand-color:      #9faab7;*/
 
 $grey-color:       #3f3f3f;
-$grey-color-light: lighten($grey-color, 50%);
+$grey-color-light: lighten($grey-color, 30%);
 $grey-color-lighter: lighten($grey-color, 70%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
 $content-width:    700px;
 
-$on-palm:          500px;
-$on-laptop:        700px;
+$on-palm:          768px;
+$on-laptop:        1024px;
 
 // Minima also includes a mixin for defining media queries.
 // Use media queries like this:
