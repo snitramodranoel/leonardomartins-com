@@ -57,7 +57,7 @@ GEM
       forwardable-extended (~> 2.6)
     posix-spawn (0.3.13)
     public_suffix (3.0.3)
-    rack (1.6.11)
+    rack (1.6.12)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
@@ -83,7 +83,8 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-last-modified-at
   jekyll-livereload
+  rack (>= 1.6.12)
   redcarpet
 
 BUNDLED WITH
-   1.15.3
+   2.0.2
